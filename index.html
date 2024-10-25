@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gerenciamento da S&F Lanchonetes</title>
+    <link href="style.css" rel="stylesheet">
+    <link rel="icon" href="WhatsApp Image 2024-10-24 at 20.22.01.jpeg" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>Sistema de Gerenciamento da S&F Lanchonetes</h1>
+        <img src="WhatsApp Image 2024-10-24 at 20.22.01.jpeg" alt="Logo">
+    </header>
+    
+
+    <section id="cadastro-funcionarios">
+        <h2>Cadastrar Funcionário</h2>
+        <form id="form-funcionarios">
+            <input type="text" id="nome" placeholder="Nome do Funcionário" required>
+            <input type="text" id="cpf" placeholder="CPF do Funcionário" required>
+            <select id="cargo" required>
+                <option value="" disabled selected>Selecione o Cargo</option>
+                <option value="Atendente">Atendente</option>
+                <option value="Cozinheiro">Cozinheiro</option>
+                <option value="Gerente">Gerente</option>
+            </select>
+            <button type="submit">Cadastrar Funcionário</button>
+        </form>
+        <div id="lista-funcionarios"></div>
+    </section>
+
+    <section id="gerenciamento-pedidos">
+        <h2>Gerenciar Pedidos</h2>
+        <form id="form-pedidos">
+            <input type="text" id="pedido" placeholder="Nome do Pedido" required>
+            <textarea id="descricao" placeholder="Descrição do Pedido (opcional)"></textarea>
+            <select id="responsavel" required>
+                <option value="" disabled selected>Selecione o Responsável</option>
+            </select>
+            <select id="status" required>
+                <option value="A Fazer">A Fazer</option>
+                <option value="Fazendo">Fazendo</option>
+                <option value="Pronto para entrega">Pronto para entrega</option>
+            </select>
+            <button type="submit">Adicionar Pedido</button>
+        </form>
+        <div id="lista-pedidos"></div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
